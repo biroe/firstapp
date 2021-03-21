@@ -38,33 +38,34 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 //up to 10 element
-                Spacer()
-                Button(action: {
-                    playerScore = 0
-                    computerScore = 0
-                }, label: {
-                    Image("war")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 100.0)
-                })
-                Spacer()
-                HStack{
-                    Spacer()
-                    Image(playerCar)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 200.0)
-                        .border(Color.black, width: 3)
-                    Spacer()
-                    Image(computerVar)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 200.0)
-                        .border(Color.black, width: 3)
-                    Spacer()
-                }
-                Spacer()
+//                Spacer()
+//                Button(action: {
+//                    playerScore = 0
+//                    computerScore = 0
+//                }, label: {
+//                    Image("war")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(height: 100.0)
+//                })
+//                Spacer()
+//                HStack{
+//                    Spacer()
+//                    Image(playerCar)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(height: 200.0)
+//                        .border(Color.black, width: 3)
+//                    Spacer()
+//                    Image(computerVar)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(height: 200.0)
+//                        .border(Color.black, width: 3)
+//                    Spacer()
+//                }
+                MapView()
+                    .frame(height: 200)
                 Button(action: {
                     let playerRandom = Int.random(in: 1...4)
                     let computerRandom = Int.random(in: 1...4)
@@ -83,13 +84,18 @@ struct ContentView: View {
                         playerScore += 1
                     }
                 }, label: {
-                    Image("fight")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 100.0)
+                    CircleImage()
+                        .offset(y: -50)
+                        .padding(.top, 50)
+                        .padding(.bottom, -50)
+                        
+                    
                 })
                 
                 Spacer()
+                Divider()
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 HStack(spacing:70.0)
                 {
                     VStack(spacing:20.0){
@@ -123,7 +129,7 @@ struct ContentView_Previews: PreviewProvider {
                 .previewDevice("iPhone 12 Pro Max")
             ContentView()
                 .preferredColorScheme(.light)
-                .previewDevice("iPhone 12 Pro Mini")
+                
         }
     }
 }
