@@ -1,25 +1,61 @@
 //
 //  ContentView.swift
-//  Shared
 //
 //  Created by ryo fuj on 11/14/21.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MenuContent: View {
+    var menulists = ["RYO FUJIMURA","SKILLS","CONTACT"]
     var body: some View {
-        VStack{
-            Spacer()
-            filter()
-            Spacer()
-            Text("Hello, world!")
-                .padding()
-            Spacer()
-            Spacer()
+        List {
+            Text(menulists[0]).onTapGesture {
+                print("My Profile")
+            }
+            Text(menulists[1]).onTapGesture {
+                print("Posts")
+            }
+            Text(menulists[2]).onTapGesture {
+                print("Logout")
+            }
         }
+//        HStack{
+//            ForEach(menulists, content: { menulist in
+//                Text(menulist)
+//            })
+//        }
     }
 }
+
+
+struct ContentView: View {
+    @State var menuOpen: Bool = false
+    
+    var body: some View {
+        ZStack {
+            if !self.menuOpen {
+                Button(action: {
+                    self.openMenu()
+                }, label: {
+                    Text("Open")
+                })
+            }
+            
+            SideMenu(width: 220,
+                     isOpen: self.menuOpen,
+                     menuClose: self.openMenu)
+        }
+    }
+    
+    func openMenu() {
+        self.menuOpen.toggle()
+    }
+}
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
