@@ -13,8 +13,14 @@
 		FB0616FF2741B6F000B72170 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0616ED2741B6EF00B72170 /* ContentView.swift */; };
 		FB0617002741B6F000B72170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0616EE2741B6F000B72170 /* Assets.xcassets */; };
 		FB0617012741B6F000B72170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0616EE2741B6F000B72170 /* Assets.xcassets */; };
-		FB23F810275F32B300D7E3F5 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F80F275F32B300D7E3F5 /* SideMenu.swift */; };
-		FB23F811275F32B300D7E3F5 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F80F275F32B300D7E3F5 /* SideMenu.swift */; };
+		FB4DBDD22761EF69003B7BE9 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDD12761EF69003B7BE9 /* ProductCard.swift */; };
+		FB4DBDD32761EF69003B7BE9 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDD12761EF69003B7BE9 /* ProductCard.swift */; };
+		FB4DBDD82761F40E003B7BE9 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDD72761F40E003B7BE9 /* CardModifier.swift */; };
+		FB4DBDD92761F40E003B7BE9 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDD72761F40E003B7BE9 /* CardModifier.swift */; };
+		FB4DBDDB276205A0003B7BE9 /* RandomChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDDA276205A0003B7BE9 /* RandomChoices.swift */; };
+		FB4DBDDC276205A0003B7BE9 /* RandomChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDDA276205A0003B7BE9 /* RandomChoices.swift */; };
+		FB4DBDE2276208AA003B7BE9 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDE1276208AA003B7BE9 /* RedButton.swift */; };
+		FB4DBDE3276208AA003B7BE9 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDE1276208AA003B7BE9 /* RedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +30,10 @@
 		FB0616F32741B6F000B72170 /* firstapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0616F92741B6F000B72170 /* firstapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0616FB2741B6F000B72170 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		FB23F80F275F32B300D7E3F5 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		FB4DBDD12761EF69003B7BE9 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		FB4DBDD72761F40E003B7BE9 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		FB4DBDDA276205A0003B7BE9 /* RandomChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomChoices.swift; sourceTree = "<group>"; };
+		FB4DBDE1276208AA003B7BE9 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +66,9 @@
 		FB0616EB2741B6EF00B72170 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FB4DBDDD276205C7003B7BE9 /* RandomChoices */,
 				FB0616EC2741B6EF00B72170 /* firstappApp.swift */,
 				FB0616ED2741B6EF00B72170 /* ContentView.swift */,
-				FB23F80F275F32B300D7E3F5 /* SideMenu.swift */,
 				FB0616EE2741B6F000B72170 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -80,6 +89,17 @@
 				FB0616FB2741B6F000B72170 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		FB4DBDDD276205C7003B7BE9 /* RandomChoices */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DBDD12761EF69003B7BE9 /* ProductCard.swift */,
+				FB4DBDD72761F40E003B7BE9 /* CardModifier.swift */,
+				FB4DBDDA276205A0003B7BE9 /* RandomChoices.swift */,
+				FB4DBDE1276208AA003B7BE9 /* RedButton.swift */,
+			);
+			path = RandomChoices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB23F810275F32B300D7E3F5 /* SideMenu.swift in Sources */,
+				FB4DBDE2276208AA003B7BE9 /* RedButton.swift in Sources */,
+				FB4DBDDB276205A0003B7BE9 /* RandomChoices.swift in Sources */,
 				FB0616FE2741B6F000B72170 /* ContentView.swift in Sources */,
 				FB0616FC2741B6F000B72170 /* firstappApp.swift in Sources */,
+				FB4DBDD82761F40E003B7BE9 /* CardModifier.swift in Sources */,
+				FB4DBDD22761EF69003B7BE9 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB23F811275F32B300D7E3F5 /* SideMenu.swift in Sources */,
+				FB4DBDE3276208AA003B7BE9 /* RedButton.swift in Sources */,
+				FB4DBDDC276205A0003B7BE9 /* RandomChoices.swift in Sources */,
 				FB0616FF2741B6F000B72170 /* ContentView.swift in Sources */,
 				FB0616FD2741B6F000B72170 /* firstappApp.swift in Sources */,
+				FB4DBDD92761F40E003B7BE9 /* CardModifier.swift in Sources */,
+				FB4DBDD32761EF69003B7BE9 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
