@@ -23,6 +23,7 @@ struct RedButton: View {
                 .background(Color.red)
                 .cornerRadius(10)
         }
+        .padding(20)
     }
 }
 

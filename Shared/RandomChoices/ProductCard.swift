@@ -52,12 +52,12 @@ struct ProductCard: View {
                     .background(Color(red: 240/255, green: 240/255, blue: 240/255))
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 0)
-                    .offset(y: -40)
+                    .offset(y: -55)
                 Spacer()
             }
         }
         .padding(.horizontal,10)
-        .padding(.vertical,20)
+        .padding(.bottom,20)
     }
 }
 
