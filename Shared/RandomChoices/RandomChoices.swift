@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RandomChoices: View {
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Choose your food")

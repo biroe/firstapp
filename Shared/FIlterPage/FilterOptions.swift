@@ -7,60 +7,58 @@
 
 import SwiftUI
 
+struct FilterItem: Identifiable {
+    let id = UUID()
+    let dollarsigns: String
+    let categories: String
+}
 struct FilterOptions: View {
     @State private var miles: Double = 0
     @State private var selection = 0
 //    @State private var numberSelection = Selection.numberone
 //    var selection: Int
-    
-    
+
     var body: some View {
         ZStack{
             VStack(alignment: .center) {
-                HStack(alignment: .center) {
-                    Text("$")
-                        .font(.system(size: 22, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                    Text("$")
-                        .font(.system(size: 22, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                    Text("$")
-                        .font(.system(size: 22, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                    Text("$")
-                        .font(.system(size: 22, weight: .bold, design: .default))
-                        .foregroundColor(.white)
+                HStack {
+                    ForEach(options) { o in
+                        GrayButton(labeltext: o.dollarsigns)
+                        Spacer()
+                    }
                 }
-                HStack{
-                    Text("Category")
-                        .font(.system(size: 18, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                    Text("Category")
-                        .font(.system(size: 18, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                    Text("Category")
-                        .font(.system(size: 18, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                    Text("Category")
-                        .font(.system(size: 18, weight: .bold, design: .default))
-                        .foregroundColor(.white)
+                .padding([.top, .leading], 20)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(options) { o in
+                            GrayButton(labeltext: o.categories)
+                                .padding(.trailing, 8.0)
+                        }
+                    }
                 }
+                .padding([.top, .leading], 20)
                 VStack{
                     Slider(value: $miles, in: 1...30,  step: 1)
-                        .padding(.horizontal, 10)
+                        .accentColor(Color.black)
+                        .frame(height: 30)
+                        .background(Color.gray)
+                        .cornerRadius(20)
+                        .padding([.top, .leading, .trailing], 20)
+                        
                     Text("\(miles, specifier: "%.0f") miles")
-                        .font(.system(size: 18, weight: .bold, design: .default))
+                        .font(.system(size: 26, weight: .bold, design: .default))
                         .foregroundColor(.white)
                 }
                 HStack{
                     Picker("", selection: $selection) {
-                        ForEach(1...10, id: \.self) {
+                        ForEach(1...5, id: \.self) {
                             Text("\($0)")
+                                .font(.system(size: 26, weight: .bold, design: .default))
+                                .foregroundColor(.white)
                         }
-                        .foregroundColor(.white)
                     }
                     Text("selection")
-                        .font(.system(size: 18, weight: .bold, design: .default))
+                        .font(.system(size: 26, weight: .bold, design: .default))
                         .foregroundColor(.white)
                 }
                 
@@ -68,7 +66,7 @@ struct FilterOptions: View {
             .frame(maxWidth: .infinity, alignment: .center)
             .background(Color(red: 0/255, green: 0/255, blue: 0/255))
             .modifier(CardModifier())
-            .padding(.all, 10)
+//            .padding(.all, 0)
             VStack {
                 HStack {
                     Text("Filter")
