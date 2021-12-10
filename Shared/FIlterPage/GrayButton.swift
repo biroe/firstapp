@@ -15,11 +15,11 @@ struct GrayButton: View {
         Button(action: { self.didTap.toggle() }) {
             Text(labeltext)
                 .font(.system(size: 26, weight: .bold, design: .default))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .padding(.horizontal, 15.0)
                 .padding(.vertical, 3.0)
             }
-            .background(didTap ? Color.red : Color.gray)
+            .background(didTap ? Color.red : Color.white)
             .cornerRadius(10)
 //            .padding(.all, 3.0)
     }
