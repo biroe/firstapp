@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct RedButton: View {
-    var buttonText: String
-//    var buttonAction: String
+    @State private var choicePage:Bool = false
+    @State private var filterPage:Bool = false
     
+    var buttonText: String
+    
+//    var buttonAction: String
     var body: some View {
-        Button {
-            print("Button pressed")
-        } label: {
+        Button(action: { self.filterPage.toggle(); self.choicePage.toggle() }) {
             Text((buttonText))
                 .font(.title)
                 .fontWeight(.bold)
@@ -22,8 +23,9 @@ struct RedButton: View {
                 .padding(20)
                 .background(Color.red)
                 .cornerRadius(10)
-        }
+            }
         .padding(20)
+        
     }
 }
 
