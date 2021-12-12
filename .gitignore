@@ -5,6 +5,6 @@
 **/*.doc
 **/*.docx
 **/*.xlsx
-.DS_Store
 /.metadata/
 /.ArrayList/
+.DS_Store
