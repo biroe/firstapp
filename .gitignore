@@ -8,4 +8,5 @@
 /.metadata/
 /.ArrayList/
 .DS_Store
-/firstapp.xcodeproj/xcuserdata/ryofuj.xcuserdatad/xcschemes/xcschememanagement.plist
+**/*/xcschememanagement.plist
+*.xcuserstate
