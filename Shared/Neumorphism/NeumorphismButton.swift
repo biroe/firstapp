@@ -11,6 +11,8 @@ extension Color {
     static let offWhite = Color(red: 230 / 255, green: 225 / 255, blue: 225 / 255)
 }
 
+var roundbox = RoundedRectangle(cornerRadius: 25, style: .continuous)
+
 extension LinearGradient {
     init(_ colors: Color...) {
         self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -21,28 +23,28 @@ struct SimpleButtonStyle: ButtonStyle{
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(30)
-            .contentShape(Circle())
+            .contentShape(roundbox)
             .background(
                 Group{
                     if configuration.isPressed{
-                        Circle()
+                        roundbox
                             .fill(Color.offWhite)
                             .overlay(
-                                Circle()
+                                roundbox
                                     .stroke(Color.gray, lineWidth: 4)
                                     .blur(radius: 4)
                                     .offset(x: 2, y: 2)
-                                    .mask(Circle().fill(LinearGradient(Color.black, Color.clear)))
+                                    .mask(roundbox.fill(LinearGradient(Color.black, Color.clear)))
                             )
                             .overlay(
-                                Circle()
+                                roundbox
                                     .stroke(Color.white, lineWidth: 8)
                                     .blur(radius: 4)
                                     .offset(x: -2, y: -2)
-                                    .mask(Circle().fill(LinearGradient(Color.clear, Color.black)))
+                                    .mask(roundbox.fill(LinearGradient(Color.clear, Color.black)))
                             )
                     } else {
-                        Circle()
+                        roundbox
                             .fill(Color.offWhite)
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
@@ -54,17 +56,23 @@ struct SimpleButtonStyle: ButtonStyle{
 }
 
 struct NeumorphismButton: View {
-    var body: some View {
+    @State private var didTap:Bool = false
+    
+    var body: some View {  
         ZStack {
             Color.offWhite
             
-            Button(action: {
-                print("Button pressed")
-            }){
-                Image(systemName: "chevron.right.circle.fill")
-                    .foregroundColor(.gray)
+            Button(action: { self.didTap.toggle() } ){
+                Text("うんちぇる")
+                    .font(.title)
+                    .fontWeight(.ultraLight)
+                    .foregroundColor(.blue)
+                
             }
+            .padding(20)
+//            .background(didTap ? Color.red : Color.white)
             .buttonStyle(SimpleButtonStyle())
+            
         }
         .ignoresSafeArea(.all)
     }
