@@ -10,7 +10,7 @@ import SwiftUI
 extension Color {
     static let offWhite = Color(red: 230 / 255, green: 225 / 255, blue: 225 / 255)
     static let warmOffWhite = Color(red: 235 / 255, green: 225 / 255, blue: 225 / 255)
-    static let tezt = "HE::P"
+//    static let tezt = "HE::P"
 }
 
 var roundbox = RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -38,14 +38,14 @@ struct SimpleButtonStyle: ButtonStyle{
                                     .stroke(Color.gray, lineWidth: 4)
                                     .blur(radius: 4)
                                     .offset(x: 2, y: 2)
-//                                    .mask(roundbox.fill(LinearGradient(Color.black, Color.clear)))
+                                    .mask(roundbox.fill(LinearGradient(Color.black, Color.clear)))
                             )
                             .overlay(
                                 roundbox
                                     .stroke(Color.white, lineWidth: 8)
                                     .blur(radius: 4)
                                     .offset(x: -2, y: -2)
-//                                    .mask(roundbox.fill(LinearGradient(Color.clear, Color.black)))
+                                    .mask(roundbox.fill(LinearGradient(Color.clear, Color.black)))
                             )
                     } else {
                         roundbox
