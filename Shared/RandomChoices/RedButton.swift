@@ -15,17 +15,13 @@ struct RedButton: View {
     
 //    var buttonAction: String
     var body: some View {
-        Button(action: { self.filterPage.toggle(); self.choicePage.toggle() }) {
-            Text((buttonText))
+        Text((buttonText))
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
-                .padding(20)
+                .padding(30)
                 .background(Color.red)
                 .cornerRadius(10)
-            }
-        .padding(20)
-        
     }
 }
 

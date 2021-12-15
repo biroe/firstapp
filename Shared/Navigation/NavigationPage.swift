@@ -13,41 +13,60 @@ struct NavigationPage: View {
             ZStack{
                 Color(red: 250/255, green: 240/255, blue: 240/255)
                         .edgesIgnoringSafeArea(.all)
-                VStack{
-                    FilterOptions()
-                    Spacer()
-                    NavigationLink(destination: SecondContentView() , label: {
-                        
-                        Text("GO!")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.white)
-                            .padding(20)
-                            .background(Color.red)
-                            .cornerRadius(10)
-                    })
-                }
-                .navigationTitle("Choose your food")
+                FilterNavigationPage()
                 
             }
+            .navigationTitle("Choose your food")
         }
     }
 }
 
-struct SecondContentView: View {
+struct FilterNavigationPage: View {
+    var body: some View {
+            ZStack{
+                Color(red: 250/255, green: 240/255, blue: 240/255)
+                        .edgesIgnoringSafeArea(.all)
+                VStack{
+                    FilterOptions()
+                    Spacer()
+                    NavigationLink(destination: ChoiceNavigationPage() , label: {
+                        RedButton(buttonText: "GO!")
+                    })
+                    Spacer()
+                    Spacer()
+                }
+                .navigationTitle("Choose your food")
+                .navigationBarBackButtonHidden(true)
+                
+        }
+    }
+}
+
+
+struct ChoiceNavigationPage: View {
 //    var choicelimit: Int = 3
     var body: some View {
         ZStack{
             Color(red: 250/255, green: 240/255, blue: 240/255)
                     .edgesIgnoringSafeArea(.all)
             VStack{
-                NavigationLink(destination: FilterOptions() , label: {
-                    Text("Continue")
-                        .font(.system(size: 26, weight: .bold, design: .default))
-                        .foregroundColor(.gray)
-                })
+                RandomChoices()
+                Spacer()
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: ChoiceNavigationPage() , label: {
+                        RedButton(buttonText: "Next")
+                    })
+                    Spacer()
+                    NavigationLink(destination: FilterNavigationPage() , label: {
+                        RedButton(buttonText: "Filter")
+                    })
+                    Spacer()
+                }
+                Spacer()
+                Spacer()
             }
-            .navigationTitle("Choose your food")
+            .navigationBarBackButtonHidden(true)
             
         }
     }
