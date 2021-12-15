@@ -22,8 +22,9 @@
 		FB4DBDDC276205A0003B7BE9 /* RandomChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDDA276205A0003B7BE9 /* RandomChoices.swift */; };
 		FB4DBDE2276208AA003B7BE9 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDE1276208AA003B7BE9 /* RedButton.swift */; };
 		FB4DBDE3276208AA003B7BE9 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDE1276208AA003B7BE9 /* RedButton.swift */; };
-		FB5F089827627EDB0024E05F /* FiltePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F089727627EDB0024E05F /* FiltePage.swift */; };
 		FB5F089C27627F700024E05F /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F089B27627F700024E05F /* FilterOptions.swift */; };
+		FB8F4BAC2769D6C0008EE3E6 /* NavigationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F4BAB2769D6C0008EE3E6 /* NavigationPage.swift */; };
+		FB8F4BB02769D858008EE3E6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8F4BAF2769D858008EE3E6 /* Launch Screen.storyboard */; };
 		FBDF5225276338AB00366214 /* GrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF5224276338AB00366214 /* GrayButton.swift */; };
 		FBDF522727633CB300366214 /* FilterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF522627633CB300366214 /* FilterText.swift */; };
 		FBDF52292763454600366214 /* StartUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF52282763454600366214 /* StartUpPage.swift */; };
@@ -42,8 +43,9 @@
 		FB4DBDD72761F40E003B7BE9 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		FB4DBDDA276205A0003B7BE9 /* RandomChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomChoices.swift; sourceTree = "<group>"; };
 		FB4DBDE1276208AA003B7BE9 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
-		FB5F089727627EDB0024E05F /* FiltePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltePage.swift; sourceTree = "<group>"; };
 		FB5F089B27627F700024E05F /* FilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
+		FB8F4BAB2769D6C0008EE3E6 /* NavigationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPage.swift; sourceTree = "<group>"; };
+		FB8F4BAF2769D858008EE3E6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FBDF5224276338AB00366214 /* GrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayButton.swift; sourceTree = "<group>"; };
 		FBDF522627633CB300366214 /* FilterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterText.swift; sourceTree = "<group>"; };
 		FBDF52282763454600366214 /* StartUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpPage.swift; sourceTree = "<group>"; };
@@ -80,13 +82,13 @@
 		FB0616EB2741B6EF00B72170 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FB8F4BAA2769D6AD008EE3E6 /* Navigation */,
 				FBFBDD3E2765D47200F3C777 /* Neumorphism */,
 				FB5F089427627D610024E05F /* FIlterPage */,
 				FB4DBDDD276205C7003B7BE9 /* RandomChoices */,
 				FB0616EC2741B6EF00B72170 /* firstappApp.swift */,
 				FB0616ED2741B6EF00B72170 /* ContentView.swift */,
 				FB0616EE2741B6F000B72170 /* Assets.xcassets */,
-				FBDF52282763454600366214 /* StartUpPage.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -122,13 +124,22 @@
 		FB5F089427627D610024E05F /* FIlterPage */ = {
 			isa = PBXGroup;
 			children = (
-				FB5F089727627EDB0024E05F /* FiltePage.swift */,
 				FBDF5224276338AB00366214 /* GrayButton.swift */,
 				FB5F089B27627F700024E05F /* FilterOptions.swift */,
 				FB455B1F2763D63700AF3501 /* PickerFile.swift */,
 				FBDF522627633CB300366214 /* FilterText.swift */,
 			);
 			path = FIlterPage;
+			sourceTree = "<group>";
+		};
+		FB8F4BAA2769D6AD008EE3E6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FBDF52282763454600366214 /* StartUpPage.swift */,
+				FB8F4BAB2769D6C0008EE3E6 /* NavigationPage.swift */,
+				FB8F4BAF2769D858008EE3E6 /* Launch Screen.storyboard */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		FBFBDD3E2765D47200F3C777 /* Neumorphism */ = {
@@ -218,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8F4BB02769D858008EE3E6 /* Launch Screen.storyboard in Resources */,
 				FB0617002741B6F000B72170 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,9 +253,9 @@
 				FBDF52292763454600366214 /* StartUpPage.swift in Sources */,
 				FB4DBDE2276208AA003B7BE9 /* RedButton.swift in Sources */,
 				FB4DBDDB276205A0003B7BE9 /* RandomChoices.swift in Sources */,
+				FB8F4BAC2769D6C0008EE3E6 /* NavigationPage.swift in Sources */,
 				FBDF5225276338AB00366214 /* GrayButton.swift in Sources */,
 				FB455B202763D63700AF3501 /* PickerFile.swift in Sources */,
-				FB5F089827627EDB0024E05F /* FiltePage.swift in Sources */,
 				FB0616FE2741B6F000B72170 /* ContentView.swift in Sources */,
 				FBDF522727633CB300366214 /* FilterText.swift in Sources */,
 				FBFBDD402765D47F00F3C777 /* NeumorphismButton.swift in Sources */,
@@ -385,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LD578K3BS7;
@@ -393,6 +406,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = "Launch Screen";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -415,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LD578K3BS7;
@@ -423,6 +441,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = "Launch Screen";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

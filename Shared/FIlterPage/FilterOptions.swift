@@ -50,6 +50,7 @@ struct FilterOptions: View {
                         .font(.system(size: 26, weight: .bold, design: .default))
                         .foregroundColor(.black)
                 }
+                .padding(.vertical)
                 HStack{
                     PickerFile()
                     Text("selection")
@@ -57,26 +58,27 @@ struct FilterOptions: View {
                         .foregroundColor(.white)
                 }
                 .labelsHidden()
+                .padding(.vertical)
                 
             }
             .frame(maxWidth: .infinity, alignment: .center)
             .background(Color(red: 240/255, green: 240/255, blue: 240/255))
             .modifier(CardModifier())
-//            .padding(.all, 0)
-            VStack {
-                HStack {
-                    Text("Filter")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                        .frame(width: 105, height: 35, alignment: .center)
-                        .background(Color(red: 240/255, green: 240/255, blue: 240/255))
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 0)
-//                        .offset(y: -50)
-                    Spacer()
-                }
-                Spacer()
-            }
+            .padding(.all, 10)
+//            VStack {
+//                HStack {
+//                    Text("Filter")
+//                        .font(.title2)
+//                        .fontWeight(.heavy)
+//                        .frame(width: 105, height: 35, alignment: .center)
+//                        .background(Color(red: 240/255, green: 240/255, blue: 240/255))
+//                        .cornerRadius(8)
+//                        .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 0)
+////                        .offset(y: -50)
+//                    Spacer()
+//                }
+//                Spacer()
+//            }
         }
         .padding(.horizontal,10)
         .padding(.bottom,20)
