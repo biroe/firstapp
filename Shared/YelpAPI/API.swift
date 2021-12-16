@@ -3,48 +3,59 @@
 //  firstapp (iOS)
 //
 //  Created by ryo fuj on 12/15/21.
-//
-
-import SwiftUI
-
+//l
 import SwiftUI
 
 struct API: View {
-    @State var gifUrl = String()
-    @State var searchString = String()
+    @State var isAnimating = false
+    
+    var animation: Animation {
+        .interpolatingSpring(stiffness:0.5, damping: 0.5)
+                    .repeatForever()
+                    .delay(isAnimating ? .random(in: 0...1) : 0)
+                    .speed(isAnimating ? .random(in: 0...1) : 0)
+    }
     
     var body: some View {
-        Text("\(gifUrl)")
-            .onTapGesture {
-                let url = URL(string: gifUrl)
-                guard let GIPHYUrl = url, UIApplication.shared.canOpenURL(GIPHYUrl) else {return}
-                UIApplication.shared.open(GIPHYUrl)
-            }
-        TextField("Search GIFs", text: $searchString)
-            .multilineTextAlignment(.center)
-        Button("Fetch GIF"){fetchAPI()}
-    }
-    
-    func fetchAPI() {
-        let apiKey = "YOUR_API_KEY"
-        let url = URL(string: "https://api.giphy.com/v1/gifs/search?api_key=\(apiKey)&q=\(self.searchString)&limit=25&offset=0&rating=g&lang=en")
-
-        
-        URLSession.shared.dataTask(with: url!) { data, response, error in
-            if let data = data {
-                if let decodedGiphy = try? JSONDecoder().decode(GIPHYStructure.self, from: data){
-                    self.gifUrl = decodedGiphy.data[0].url
+        GeometryReader { proxy in
+            VStack{
+                ZStack{
+                    ForEach(1..<14){ i in
+                        Image("food\(i % 7)")
+                            .position(x: .random(in: 0...proxy.size.width),
+                                      y: .random(in: 0...proxy.size.height/2))
+                            .animation(animation)
+                    }
                 }
+                .frame(height: proxy.size.height/3)
+                
+                Text("Choose your food")
+                    .font(.title)
+                
+                Text("Find your food now!")
+                    .font(.title)
+                Spacer()
+                
+                Button(action: {}) {
+                    Text("Get started")
+                }
+                .padding()
+                .frame(maxWidth: proxy.size.width - 50)
+                .background(Color.red)
+                .cornerRadius(50)
+                .shadow(radius: 20)
+                .foregroundColor(.white)
             }
-        }.resume()
+        }
+        .onAppear{
+            isAnimating.toggle()
+        }
+        
     }
 }
 
-
-struct GIPHYStructure: Decodable {
-    let data: [dataStructure]
-}
-
-struct dataStructure: Decodable {
-    let url: String
+struct API_Preview: PreviewProvider {
+    static var previews: some View{
+        API()
+    }
 }
