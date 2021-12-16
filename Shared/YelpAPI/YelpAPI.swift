@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 import Combine
 
-let apikey = "VLIT5wAwMykUM0eQKE8iu0026bDwH0lhizuYVRFRZy84mKBycGKYhBFfsCtPcAPoYJSOkgIH1bU0psozxENyG9gl6pZ_GIAYE-QEFCzcs1HGdh678HpPS15HIa-5YXYx"
+let apikey = ""
 
 struct YelpAPI {
     // search term, user location, category
