@@ -23,11 +23,9 @@
 		FB4DBDE2276208AA003B7BE9 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDE1276208AA003B7BE9 /* RedButton.swift */; };
 		FB4DBDE3276208AA003B7BE9 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBDE1276208AA003B7BE9 /* RedButton.swift */; };
 		FB5F089C27627F700024E05F /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F089B27627F700024E05F /* FilterOptions.swift */; };
-		FB5FC08F276B3B58000CF443 /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5FC08E276B3B58000CF443 /* YelpAPI.swift */; };
+		FB800491276C702600149948 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB800490276C702600149948 /* FoodView.swift */; };
 		FB8F4BAC2769D6C0008EE3E6 /* NavigationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F4BAB2769D6C0008EE3E6 /* NavigationPage.swift */; };
 		FB8F4BB02769D858008EE3E6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8F4BAF2769D858008EE3E6 /* Launch Screen.storyboard */; };
-		FB983711276BB68C00853218 /* APIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB983710276BB68C00853218 /* APIView.swift */; };
-		FB983713276BB8DF00853218 /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB983712276BB8DF00853218 /* TestAPI.swift */; };
 		FBDF5225276338AB00366214 /* GrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF5224276338AB00366214 /* GrayButton.swift */; };
 		FBDF522727633CB300366214 /* FilterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF522627633CB300366214 /* FilterText.swift */; };
 		FBDF52292763454600366214 /* StartUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF52282763454600366214 /* StartUpPage.swift */; };
@@ -47,11 +45,9 @@
 		FB4DBDDA276205A0003B7BE9 /* RandomChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomChoices.swift; sourceTree = "<group>"; };
 		FB4DBDE1276208AA003B7BE9 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		FB5F089B27627F700024E05F /* FilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
-		FB5FC08E276B3B58000CF443 /* YelpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
+		FB800490276C702600149948 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		FB8F4BAB2769D6C0008EE3E6 /* NavigationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPage.swift; sourceTree = "<group>"; };
 		FB8F4BAF2769D858008EE3E6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		FB983710276BB68C00853218 /* APIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIView.swift; sourceTree = "<group>"; };
-		FB983712276BB8DF00853218 /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPI.swift; sourceTree = "<group>"; };
 		FBDF5224276338AB00366214 /* GrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayButton.swift; sourceTree = "<group>"; };
 		FBDF522627633CB300366214 /* FilterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterText.swift; sourceTree = "<group>"; };
 		FBDF52282763454600366214 /* StartUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpPage.swift; sourceTree = "<group>"; };
@@ -88,7 +84,7 @@
 		FB0616EB2741B6EF00B72170 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				FB8F4BB12769E713008EE3E6 /* YelpAPI */,
+				FB80048F276C701900149948 /* FoodView */,
 				FB8F4BAA2769D6AD008EE3E6 /* Navigation */,
 				FBFBDD3E2765D47200F3C777 /* Neumorphism */,
 				FB5F089427627D610024E05F /* FIlterPage */,
@@ -139,6 +135,14 @@
 			path = FIlterPage;
 			sourceTree = "<group>";
 		};
+		FB80048F276C701900149948 /* FoodView */ = {
+			isa = PBXGroup;
+			children = (
+				FB800490276C702600149948 /* FoodView.swift */,
+			);
+			path = FoodView;
+			sourceTree = "<group>";
+		};
 		FB8F4BAA2769D6AD008EE3E6 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,16 +151,6 @@
 				FB8F4BAF2769D858008EE3E6 /* Launch Screen.storyboard */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		FB8F4BB12769E713008EE3E6 /* YelpAPI */ = {
-			isa = PBXGroup;
-			children = (
-				FB5FC08E276B3B58000CF443 /* YelpAPI.swift */,
-				FB983710276BB68C00853218 /* APIView.swift */,
-				FB983712276BB8DF00853218 /* TestAPI.swift */,
-			);
-			path = YelpAPI;
 			sourceTree = "<group>";
 		};
 		FBFBDD3E2765D47200F3C777 /* Neumorphism */ = {
@@ -268,18 +262,16 @@
 			files = (
 				FB5F089C27627F700024E05F /* FilterOptions.swift in Sources */,
 				FBDF52292763454600366214 /* StartUpPage.swift in Sources */,
-				FB983713276BB8DF00853218 /* TestAPI.swift in Sources */,
+				FB800491276C702600149948 /* FoodView.swift in Sources */,
 				FB4DBDE2276208AA003B7BE9 /* RedButton.swift in Sources */,
 				FB4DBDDB276205A0003B7BE9 /* RandomChoices.swift in Sources */,
 				FB8F4BAC2769D6C0008EE3E6 /* NavigationPage.swift in Sources */,
 				FBDF5225276338AB00366214 /* GrayButton.swift in Sources */,
 				FB455B202763D63700AF3501 /* PickerFile.swift in Sources */,
 				FB0616FE2741B6F000B72170 /* ContentView.swift in Sources */,
-				FB5FC08F276B3B58000CF443 /* YelpAPI.swift in Sources */,
 				FBDF522727633CB300366214 /* FilterText.swift in Sources */,
 				FBFBDD402765D47F00F3C777 /* NeumorphismButton.swift in Sources */,
 				FB0616FC2741B6F000B72170 /* firstappApp.swift in Sources */,
-				FB983711276BB68C00853218 /* APIView.swift in Sources */,
 				FB4DBDD82761F40E003B7BE9 /* CardModifier.swift in Sources */,
 				FB4DBDD22761EF69003B7BE9 /* ProductCard.swift in Sources */,
 			);
