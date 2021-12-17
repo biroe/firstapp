@@ -24,11 +24,11 @@ extension YelpAPI {
             .init(name: "term", value: term),
             .init(name: "longtitude", value: String(location.coordinate.longitude)),
             .init(name: "latitude", value: String(location.coordinate.latitude)),
-            .init(name: "categories", value: cat)
+            .init(name: "categories", value: cat ?? "restaurant")
         ]
         let url = urlComponents.url!
         var request = URLRequest(url: url)
-        request.addValue("Baerer \(apikey)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(apikey)", forHTTPHeaderField: "Authorization")
         
         return URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
@@ -46,11 +46,11 @@ struct SearchResult: Codable {
 
 // MARK: - Business
 struct Business: Codable {
-    let rating: Int?
+    let rating: Double?
     let price, phone, id, alias: String?
     let isClosed: Bool?
     let categories: [Category]?
-    let reviewCount: Int?
+    let reviewCount: Double?
     let name: String?
     let url: String?
     let coordinates: Coordinates?
