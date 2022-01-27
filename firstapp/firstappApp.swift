@@ -1,6 +1,6 @@
 //
 //  firstappApp.swift
-//  Shared
+//  firstapp
 //
 //  Created by ryo fuj on 1/26/22.
 //
